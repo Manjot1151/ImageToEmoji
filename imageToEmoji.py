@@ -35,7 +35,7 @@ def findNearestEmoji(pixel):
 url = input('Enter image url: ')
 response = requests.get(url)
 img = Image.open(BytesIO(response.content))
-pixels = 1500
+pixels = int(input('Enter number of pixels: '))
 downscale_factor = int(math.sqrt(img.height * img.width / pixels))
 if downscale_factor == 0:
     downscale_factor = 1
